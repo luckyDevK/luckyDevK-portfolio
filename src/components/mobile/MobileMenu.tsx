@@ -1,7 +1,7 @@
 import * as DropDownMenu from "@radix-ui/react-dropdown-menu";
-import { X, Menu } from "lucide-react";
 
-import MenuItem from "./ MenuItem";
+import ToggleMenuBar from "./ToggleMenuBar";
+import MenuItem from "./MenuItem";
 import { usePortFolioContext } from "../../context/PortfolioContext";
 
 export default function MobileMenu() {
@@ -12,17 +12,11 @@ export default function MobileMenu() {
   return (
     <DropDownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
       <DropDownMenu.Trigger asChild>
-        <button className="outline-none">
-          {isMenuOpen ? (
-            <X className="text-white" strokeWidth={3} />
-          ) : (
-            <Menu className="text-white" strokeWidth={3} />
-          )}
-        </button>
+        <ToggleMenuBar isOpen={isMenuOpen} />
       </DropDownMenu.Trigger>
 
       <DropDownMenu.Portal>
-        <DropDownMenu.Content className="rounded-2xl font-semibold text-slate-300 mr-12  pr-2 pl-5 py-4 bg-black/20 border border-white/10 overflow-clip w-50">
+        <DropDownMenu.Content className="rounded-2xl mr-10 font-semibold text-slate-300   pr-2 pl-5 py-4 bg-black/20 border border-white/10  w-50">
           {navMenu.map((menu) => (
             <MenuItem key={menu} menu={menu} />
           ))}

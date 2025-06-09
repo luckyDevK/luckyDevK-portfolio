@@ -29,7 +29,7 @@ export default function MenuItem({ menu }: ItemProps) {
               transition: { duration: 0.3 },
             },
           }}
-          className="absolute left-0 top-0 h-full w-1 gradient-dark-blue origin-top"
+          className="absolute left-0 top-0 h-full w-1 gradient-dark-blue"
         />
         {menu}
       </motion.button>

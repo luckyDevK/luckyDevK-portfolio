@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-interface PortfolioContextType {
+export interface PortfolioContextType {
   isMenuOpen: boolean;
   setIsMenuOpen: (value: React.SetStateAction<boolean>) => void;
 }
