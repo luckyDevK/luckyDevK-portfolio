@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --border-color-dark-blue: "border-blue-400/50 shadow-[0_0_50px_rgba(59,130,246,0.3)] hover:shadow-[0_0_80px_rgba(59,130,246,0.5)]";
+  --background-color-glow: "rgba(255,255,255,0.1)";
+  --box-shadow-glow: "0 0 20px rgba(59,130,246,0.5)";
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900;
+  }
+}
+
+@layer utilities {
+  .gradient-dark-blue {
+    @apply bg-gradient-to-r from-blue-400 to-cyan-400;
+  }
+}
