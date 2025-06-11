@@ -16,7 +16,7 @@ export default function MobileMenu() {
       </DropDownMenu.Trigger>
 
       <DropDownMenu.Portal>
-        <DropDownMenu.Content className="rounded-2xl mr-10 font-semibold text-slate-300   pr-2 pl-5 py-4 bg-black/20 border border-white/10  w-50">
+        <DropDownMenu.Content className="rounded-2xl mr-10 font-semibold text-slate-300 backdrop-blur-md pr-2 pl-5 py-4 bg-black/20 border border-white/10 w-50">
           {navMenu.map((menu) => (
             <MenuItem key={menu} menu={menu} />
           ))}

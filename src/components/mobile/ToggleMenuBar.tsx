@@ -13,7 +13,7 @@ export default function ToggleMenuBar({
     <button
       {...props}
       aria-label={isOpen ? "Close menu" : "Toggle menu"}
-      className="outline-0 border-0 cursor-pointer"
+      className="outline-0 border-0 cursor-pointer pointer-events-auto"
     >
       {isOpen ? (
         <X
