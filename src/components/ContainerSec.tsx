@@ -3,12 +3,16 @@ import React from "react";
 
 interface IContainer {
   className?: string;
+  id: string;
   children: React.ReactNode;
 }
 
-export default function ContainerSec({ className, children }: IContainer) {
+export default function ContainerSec({ className, id, children }: IContainer) {
   return (
-    <section className={twJoin("flex flex-col items-center", className)}>
+    <section
+      id={id}
+      className={twJoin("flex flex-col items-center", className)}
+    >
       {children}
     </section>
   );

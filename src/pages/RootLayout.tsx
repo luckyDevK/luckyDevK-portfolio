@@ -1,14 +1,13 @@
-import Header from "../components/header/Header";
-import HeroSection from "../components/hero/HeroSection";
-import About from "../components/about/About";
+import { Outlet } from "react-router-dom";
 
-export default function Index() {
+import Header from "../components/header/Header";
+
+export default function RootLayout() {
   return (
     <>
       <Header />
       <main className="flex items-center justify-center flex-col px-5 text-center text-slate-100">
-        <HeroSection />
-        <About />
+        <Outlet />
       </main>
     </>
   );

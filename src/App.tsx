@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import AnimatedBg from "./components/AnimatedBg";
-import Index from "./pages/Index";
+import RootLayout from "./pages/RootLayout";
+import Hero from "../src/components/hero/HeroSection";
+import About from "../src/components/about/About";
 import ErrorPage from "./pages/ErrorPage";
 import PortfolioContextProvider from "./context/PortfolioProvider";
 
@@ -13,8 +14,11 @@ function App() {
       <PortfolioContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="/" element={<RootLayout />}>
+              <Route index element={<Hero />}></Route>
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </PortfolioContextProvider>

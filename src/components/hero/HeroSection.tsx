@@ -2,7 +2,6 @@ import { Text, Heading } from "@radix-ui/themes";
 import * as Avatar from "@radix-ui/react-avatar";
 
 import HeroDetails from "./HeroDetails";
-import AnimatedBg from "../AnimatedBg";
 import ContainerSec from "../ContainerSec";
 
 export default function HeroSection() {

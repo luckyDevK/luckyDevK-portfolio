@@ -35,7 +35,11 @@ export default function FeatureCard({
       <Text as="p" className="text-balance ">
         {text}
       </Text>
-      {children && <div className="text-white mt-4  ">{children}</div>}
+      {children && (
+        <div className="text-white mt-4 w-full flex flex-col gap-5">
+          {children}
+        </div>
+      )}
     </Box>
   );
 }
