@@ -1,0 +1,14 @@
+export { ReactComponent as HtmlIcon } from "./html.svg";
+export { ReactComponent as CssIcon } from "./css3.svg";
+export { ReactComponent as JsIcon } from "./js.svg";
+export { ReactComponent as ReactIcon } from "./react.svg";
+export { ReactComponent as NodeJsIcon } from "./nodeJs.svg";
+export { ReactComponent as ExpressJsIcon } from "./expressJs.svg";
+export { ReactComponent as TailwindCssIcon } from "./tailwind.svg";
+export { ReactComponent as GitIcon } from "./git.svg";
+export { ReactComponent as GithubIcon } from "./github.svg";
+export { ReactComponent as JestIcon } from "./jest.svg";
+export { ReactComponent as BootstrapIcon } from "./bootstrap.svg";
+export { ReactComponent as ReactQueryIcon } from "./reactQuery.svg";
+export { ReactComponent as ReactRouterIcon } from "./reactRouter.svg";
+export { ReactComponent as TypeScriptIcon } from "./ts.svg";

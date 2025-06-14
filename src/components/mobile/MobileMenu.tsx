@@ -7,13 +7,7 @@ import { usePortFolioContext } from "../../context/PortfolioContext";
 export default function MobileMenu() {
   const { isMenuOpen, setIsMenuOpen } = usePortFolioContext();
 
-  const menuItems = [
-    { path: "/home", text: "Home" },
-    { path: "/about", text: "About" },
-    { path: "/skills", text: "Skills" },
-    { path: "/projects", text: "Projects" },
-    { path: "/contact", text: "Contact" },
-  ];
+  const menuItems = ["home", "about", "skills", "projects", "contact"];
 
   return (
     <DropDownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -24,7 +18,7 @@ export default function MobileMenu() {
       <DropDownMenu.Portal>
         <DropDownMenu.Content className="rounded-2xl mr-10 font-semibold text-slate-300 backdrop-blur-md pr-2 pl-5 py-4 bg-black/20 border border-white/10 w-50">
           {menuItems.map((item) => (
-            <MenuItem key={item.path} menu={item.text} to={item.path} />
+            <MenuItem key={item} item={item} />
           ))}
         </DropDownMenu.Content>
       </DropDownMenu.Portal>

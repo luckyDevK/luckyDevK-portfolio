@@ -1,6 +1,8 @@
 import { twMerge } from "tailwind-merge";
-import { Heading, Text, Box } from "@radix-ui/themes";
-import React, { JSX, ReactNode } from "react";
+import { Heading, Text, Flex } from "@radix-ui/themes";
+import { JSX, ReactNode } from "react";
+
+import Card from "../UI/Card";
 
 interface ICardProps {
   icon?: JSX.Element;
@@ -18,28 +20,27 @@ export default function FeatureCard({
   children,
 }: ICardProps) {
   return (
-    <Box
-      className={twMerge(
-        `flex justify-center items-center max-w-96 gap-5 flex-col bg-white/10 backdrop-blur-md  py-8 border border-white/20 rounded-md hover:bg-white/20`,
-        className
-      )}
-    >
+    <Card centered cardRole="about" className={twMerge("py-8", className)}>
       {icon && (
-        <div className="md:w-15 w-13 aspect-square gradient-dark-blue rounded-full flex items-center justify-center">
+        <Flex
+          align="center"
+          justify="center"
+          className="gradient-dark-blue text-white w-12 aspect-square rounded-full"
+        >
           {icon}
-        </div>
+        </Flex>
       )}
-      <Heading as="h3" className="font-semibold text-xl">
+      <Heading as="h2" weight="bold" size="5">
         {title}
       </Heading>
-      <Text as="p" className="text-balance ">
+      <Text as="p" size="3" className="text-balance">
         {text}
       </Text>
       {children && (
-        <div className="text-white mt-4 w-full flex flex-col gap-5">
+        <Flex direction="column" gap="5" width="100%" className="text-white">
           {children}
-        </div>
+        </Flex>
       )}
-    </Box>
+    </Card>
   );
 }

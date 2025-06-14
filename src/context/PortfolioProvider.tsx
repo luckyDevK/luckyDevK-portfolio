@@ -11,10 +11,6 @@ export default function PortfolioContextProvider({
 }: PortfolioProviderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    console.log("rendered");
-  });
-
   const ctxValues = {
     isMenuOpen,
     setIsMenuOpen,

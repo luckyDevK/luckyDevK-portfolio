@@ -10,11 +10,11 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-
+    "types": ["vite-plugin-svgr/client"],
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["src", "vite.config.ts"]
 }

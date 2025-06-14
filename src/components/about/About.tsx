@@ -6,8 +6,10 @@ import ContainerSec from "../ContainerSec";
 export default function About() {
   return (
     <ContainerSec id="about" className="justify-center">
-      <Heading className="text-3xl font-bold  mb-5">About Me</Heading>
-      <Text as="p" className="text-lg">
+      <Heading size="7" className="pb-5">
+        About Me
+      </Heading>
+      <Text as="p" size="5" className="pb-10">
         I'm a frontend developer with a strong focus on building responsive,
         user-friendly interfaces using modern web technologies like React,
         JavaScript, and Tailwind CSS. Over the past year, I've been committed to

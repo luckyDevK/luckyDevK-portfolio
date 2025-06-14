@@ -1,11 +1,11 @@
 import { MapPinHouse, Mail } from "lucide-react";
 import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import SocialMediaButton from "../logos/SocialMediaButton";
-import { Button, Text } from "@radix-ui/themes";
+import { Flex, Text } from "@radix-ui/themes";
 
 export default function HeroDetails() {
   return (
-    <div className="w-full mt-8 flex flex-col items-start gap-6 ">
+    <Flex className="w-full mt-8 flex flex-col items-start gap-6 ">
       {/* Location */}
       <Text as="p" className="flex items-center gap-2">
         <MapPinHouse />
@@ -22,20 +22,20 @@ export default function HeroDetails() {
       </Text>
 
       {/* Social Links */}
-      <div className="flex gap-4 pt-2">
+      <Flex gap="5" className="mt-5">
         <SocialMediaButton
           ariaLabel="Github Logo"
-          icon={<GitHubLogoIcon width={19} height={19} />}
+          icon={<GitHubLogoIcon width={22} height={22} />}
         />
         <SocialMediaButton
           ariaLabel="Instagram Logo"
-          icon={<InstagramLogoIcon width={19} height={19} />}
+          icon={<InstagramLogoIcon width={22} height={22} />}
         />
         <SocialMediaButton
           ariaLabel="Mail Logo"
-          icon={<Mail width={19} height={19} />}
+          icon={<Mail width={22} height={22} />}
         />
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 }

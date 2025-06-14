@@ -1,5 +1,5 @@
 import { twJoin } from "tailwind-merge";
-import React from "react";
+import { Section } from "@radix-ui/themes";
 
 interface IContainer {
   className?: string;
@@ -9,11 +9,12 @@ interface IContainer {
 
 export default function ContainerSec({ className, id, children }: IContainer) {
   return (
-    <section
+    <Section
+      maxWidth="1200px"
       id={id}
       className={twJoin("flex flex-col items-center", className)}
     >
       {children}
-    </section>
+    </Section>
   );
 }

@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "@radix-ui/themes/styles.css";
 
-import RootLayout from "./pages/RootLayout";
-import Hero from "../src/components/hero/HeroSection";
-import About from "../src/components/about/About";
+import { Theme } from "@radix-ui/themes";
+
+import Index from "./pages/Index";
 import ErrorPage from "./pages/ErrorPage";
 import PortfolioContextProvider from "./context/PortfolioProvider";
 
@@ -11,17 +12,18 @@ import "./App.css";
 function App() {
   return (
     <>
-      <PortfolioContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<RootLayout />}>
-              <Route index element={<Hero />}></Route>
-              <Route path="/about" element={<About />} />
-              <Route path="*" element={<ErrorPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </PortfolioContextProvider>
+      <Theme accentColor="blue">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+          <PortfolioContextProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Index />}></Route>
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+            </BrowserRouter>
+          </PortfolioContextProvider>
+        </div>
+      </Theme>
     </>
   );
 }

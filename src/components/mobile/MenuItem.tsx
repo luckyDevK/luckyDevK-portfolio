@@ -1,18 +1,18 @@
 import * as DropDownMenu from "@radix-ui/react-dropdown-menu";
 import clsx from "clsx";
-import { animate, motion } from "framer-motion"; // corrected import
+import { motion } from "framer-motion"; // corrected import
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 interface ItemProps {
-  menu: string;
-  to: string; // add the link target path or section
+  item: string;
+  // add the link target path or section
 }
 
-const MotionLink = motion(Link);
-
-export default function MenuItem({ menu, to }: ItemProps) {
-  const [isHover, setIsHover] = useState(false);
+export default function MenuItem({ item }: ItemProps) {
+  const navigateToPage = (id: string) => {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <DropDownMenu.Item
@@ -22,19 +22,25 @@ export default function MenuItem({ menu, to }: ItemProps) {
       )}
       asChild
     >
-      <MotionLink
-        to={to}
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-        className="relative w-full inline-block capitalize text-left bg-transparent border-none cursor-pointer text-inherit no-underline"
+      <motion.button
+        onClick={() => navigateToPage(item)}
+        type="button"
+        whileHover="hover"
+        initial="initial"
+        className="relative w-full capitalize text-left bg-transparent border-none cursor-pointer"
       >
         <motion.div
-          animate={{ scaleY: isHover ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute left-0 top-0 h-full w-1 gradient-dark-blue origin-top"
+          variants={{
+            initial: { scaleY: 0 },
+            hover: {
+              scaleY: 1,
+              transition: { duration: 0.3 },
+            },
+          }}
+          className="absolute left-0 top-0 h-full w-1 origin-top gradient-dark-blue"
         />
-        {menu}
-      </MotionLink>
+        {item}
+      </motion.button>
     </DropDownMenu.Item>
   );
 }
