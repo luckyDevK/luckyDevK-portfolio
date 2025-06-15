@@ -1,9 +1,5 @@
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Flex, Heading, Text, Button } from "@radix-ui/themes";
-import { ExternalLink } from "lucide-react";
-import * as Avatar from "@radix-ui/react-avatar";
-
-import Card from "../UI/Card";
+import { Flex } from "@radix-ui/themes";
+import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
@@ -12,6 +8,8 @@ export default function Projects() {
       className="w-full"
       direction={{ md: "row", initial: "column" }}
       gap="4"
-    ></Flex>
+    >
+      <ProjectCard />
+    </Flex>
   );
 }
