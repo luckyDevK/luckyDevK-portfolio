@@ -5,18 +5,20 @@ import { ReactNode, ComponentPropsWithoutRef } from "react";
 
 interface ICardProps {
   children: ReactNode;
-  cardRole: string;
+  cardRole?: string;
   centered: boolean;
   className?: string;
+  direction: "column" | "row";
 }
 
 type MotionFlexProps = ComponentPropsWithoutRef<typeof Flex> & MotionProps;
 
-export default function OuterCard({
+export default function Card({
   className,
   children,
   cardRole,
   centered,
+  direction,
 }: ICardProps) {
   const MotionFlex = motion.create(Flex) as React.FC<MotionFlexProps>;
 
@@ -32,7 +34,7 @@ export default function OuterCard({
       justify={centered ? "center" : undefined}
       align={centered ? "center" : undefined}
       gap="20px"
-      direction="column"
+      direction={direction}
       className={twMerge(
         ` bg-white/10 backdrop-blur-md border border-white/20 rounded-md hover:bg-white/20 overflow-hidden`,
         className

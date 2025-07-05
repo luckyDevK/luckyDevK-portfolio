@@ -9,22 +9,23 @@ interface Thumbnail {
   alt: string;
 }
 
-interface ProjectCardProps extends Thumbnail {
+export interface ProjectCardProps extends Thumbnail {
   title: string;
   desc: string;
   techs: string[];
+  githubLink: string;
   projectUrl: string;
 }
 
-type ProjectLinkProps = Pick<ProjectCardProps, "projectUrl">;
+type ProjectLinkProps = Pick<ProjectCardProps, "projectUrl" | "githubLink">;
 
 //https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
 
-function ProjectLink({ projectUrl }: ProjectLinkProps) {
+function ProjectLink({ projectUrl, githubLink }: ProjectLinkProps) {
   return (
     <Flex gap="5" className="py-4">
       <a
-        href="https://github.com/your-repo"
+        href={githubLink}
         target="_blank"
         rel="noopener noreferrer"
         className="w-1/2 bg-[#24292F] text-white rounded-md py-2 px-4 font-semibold flex items-center justify-center gap-2 transition-all hover:bg-[#1b1f23] shadow-md"
@@ -53,6 +54,7 @@ export default function ProjectCard({
   desc,
   projectUrl,
   techs,
+  githubLink,
 }: ProjectCardProps) {
   return (
     <Card centered={false} className="w-full" cardRole="show-projects">
@@ -83,7 +85,7 @@ export default function ProjectCard({
             </button>
           ))}
         </Flex>
-        <ProjectLink projectUrl={projectUrl} />
+        <ProjectLink projectUrl={projectUrl} githubLink={githubLink} />
       </div>
     </Card>
   );

@@ -5,6 +5,7 @@ import Hero from "../components/hero/HeroSection";
 import About from "../components/about/About";
 import Skills from "../components/skills/Skills";
 import Projects from "../components/my-projects/Projects";
+import Contact from "../components/contact/Contact";
 
 export default function Index() {
   return (
@@ -20,6 +21,7 @@ export default function Index() {
         <About />
         <Skills />
         <Projects />
+        <Contact />
       </Section>
     </>
   );

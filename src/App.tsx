@@ -7,8 +7,6 @@ import Index from "./pages/Index";
 import ErrorPage from "./pages/ErrorPage";
 import PortfolioContextProvider from "./context/PortfolioProvider";
 
-import "./App.css";
-
 function App() {
   return (
     <>
