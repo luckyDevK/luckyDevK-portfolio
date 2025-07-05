@@ -33,10 +33,16 @@ export default function HeroDetails() {
           icon={<GitHubLogoIcon width={22} height={22} />}
         />
         <SocialMediaButton
+          onClickIcon={() =>
+            handleClickSocMed("https://www.instagram.com/very_lucky07/")
+          }
           ariaLabel="Instagram Logo"
           icon={<InstagramLogoIcon width={22} height={22} />}
         />
         <SocialMediaButton
+          onClickIcon={() =>
+            handleClickSocMed("mailto:veryluckykurniawan@gmail.com")
+          }
           ariaLabel="Mail Logo"
           icon={<Mail width={22} height={22} />}
         />

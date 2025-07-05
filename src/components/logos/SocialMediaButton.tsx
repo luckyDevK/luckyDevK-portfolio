@@ -19,7 +19,6 @@ export default function SocialMediaButton({
       size="3"
       radius="medium"
       aria-label={ariaLabel}
-      className="cursor-pointer"
     >
       {icon}
     </IconButton>

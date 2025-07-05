@@ -7,14 +7,10 @@ export default function HeroSection() {
   return (
     <Section
       id="home"
-      className="mt-30 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
+      className="md:mt-30 mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
     >
       {/* Left: Text Content */}
-      <Flex
-        direction={{ md: "column" }}
-        gap={"5"}
-        className="text-center md:text-left"
-      >
+      <Flex direction="column" gap={"5"} className="text-center md:text-left">
         <Heading as="h1" size="8" className="text-white font-bold">
           Hi, I'm{" "}
           <Text className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -35,13 +31,13 @@ export default function HeroSection() {
       </Flex>
 
       {/* Right: Profile Avatar */}
-      <div className="relative w-56 aspect-square md:w-65 shrink-0">
-        <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl bg-white/10" />
+      <div className="relative w-45 aspect-square md:w-65 shrink-0">
+        <div className="absolute md:-right-6 md:-bottom-6 md:scale-100 scale-x-125  w-full h-full rounded-2xl bg-white/10" />
         <Avatar.Root className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl z-10">
           <Avatar.Image
             src={myProfile}
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-2xl"
           />
           <Avatar.Fallback className="absolute inset-0 flex items-center justify-center bg-sky-600 text-white text-xl font-semibold">
             Very Lucky
