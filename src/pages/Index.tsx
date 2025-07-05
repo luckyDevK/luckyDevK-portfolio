@@ -10,17 +10,15 @@ import Contact from "../components/contact/Contact";
 export default function Index() {
   return (
     <>
-      <Header />
-      <Section
-        pt="0"
-        size="4"
-        className="flex items-center justify-center gap-30 flex-col text-center text-slate-100 md:container md:mx-auto md:px-20 px-5"
-      >
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+      <Section pt="0" className="relative z-10">
+        <Header />
+        <div className="flex items-center justify-center gap-30 flex-col text-center text-slate-100 md:container md:mx-auto md:px-40 px-7">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
       </Section>
     </>
   );

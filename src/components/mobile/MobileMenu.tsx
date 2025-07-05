@@ -3,11 +3,10 @@ import * as DropDownMenu from "@radix-ui/react-dropdown-menu";
 import ToggleMenuBar from "./ToggleMenuBar";
 import MenuItem from "./MenuItem";
 import { usePortFolioContext } from "../../context/PortfolioContext";
+import { menuItems } from "../../util/menuItems";
 
 export default function MobileMenu() {
   const { isMenuOpen, setIsMenuOpen } = usePortFolioContext();
-
-  const menuItems = ["home", "about", "skills", "projects", "contact"];
 
   return (
     <DropDownMenu.Root open={isMenuOpen} onOpenChange={setIsMenuOpen}>

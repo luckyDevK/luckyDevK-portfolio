@@ -4,6 +4,10 @@ import SocialMediaButton from "../logos/SocialMediaButton";
 import { Flex, Text } from "@radix-ui/themes";
 
 export default function HeroDetails() {
+  function handleClickSocMed(url: string) {
+    window.open(url, "_blank");
+  }
+
   return (
     <Flex className="w-full mt-8 flex flex-col items-start gap-6 ">
       {/* Location */}
@@ -24,6 +28,7 @@ export default function HeroDetails() {
       {/* Social Links */}
       <Flex gap="5" className="mt-5">
         <SocialMediaButton
+          onClickIcon={() => handleClickSocMed("https://github.com/luckyDevK/")}
           ariaLabel="Github Logo"
           icon={<GitHubLogoIcon width={22} height={22} />}
         />

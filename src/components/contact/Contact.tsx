@@ -6,7 +6,7 @@ import Card from "../UI/Card";
 
 export default function Contact() {
   return (
-    <div className="mt-10">
+    <div className="mt-10" id="contact">
       <Heading as="h2" size="6">
         Get In Touch
       </Heading>

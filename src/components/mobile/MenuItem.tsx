@@ -1,11 +1,9 @@
 import * as DropDownMenu from "@radix-ui/react-dropdown-menu";
 import clsx from "clsx";
 import { motion } from "framer-motion"; // corrected import
-import { useState } from "react";
 
 interface ItemProps {
   item: string;
-  // add the link target path or section
 }
 
 export default function MenuItem({ item }: ItemProps) {
@@ -17,7 +15,7 @@ export default function MenuItem({ item }: ItemProps) {
   return (
     <DropDownMenu.Item
       className={clsx(
-        "relative group cursor-pointer overflow-hidden w-full hover:outline-0 pl-4 pr-2 rounded-md py-2",
+        "relative group cursor-pointer overflow-hidden w-full hover:outline-0 pl-4 pr-2 rounded-md py-2 ",
         "hover:bg-white/10"
       )}
       asChild

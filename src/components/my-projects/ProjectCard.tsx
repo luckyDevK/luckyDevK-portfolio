@@ -85,7 +85,7 @@ export default function ProjectCard({
         </Text>
         <Flex gap="3" wrap="wrap" className="py-5">
           {techs.map((tech) => (
-            <button className="text-blue-100 bg-blue-500/20 px-4 py-1.5 rounded-full font-medium tracking-wide shadow-sm transition-all duration-300 hover:bg-blue-500/30 hover:text-white hover:shadow-md">
+            <button className="text-blue-100 capitalize bg-blue-500/20 px-4 py-1.5 rounded-full font-medium tracking-wide shadow-sm transition-all duration-300 hover:bg-blue-500/30 hover:text-white hover:shadow-md">
               {tech}
             </button>
           ))}

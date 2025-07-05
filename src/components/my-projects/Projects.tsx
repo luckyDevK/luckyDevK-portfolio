@@ -37,7 +37,7 @@ const projectS: ProjectCardProps[] = [
 
 export default function Projects() {
   return (
-    <Flex direction="column" gap={"5"}>
+    <Flex direction="column" gap="5" id="projects">
       <Heading size={"7"}>Featured Projects</Heading>
       <Text size={"4"}>A showcase of my recent work and personal projects</Text>
       <Flex
