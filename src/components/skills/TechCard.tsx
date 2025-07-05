@@ -20,7 +20,7 @@ export default function TechCard({
   tooltipBg,
 }: ITechCard) {
   return (
-    <Card centered cardRole="skill" className="h-38">
+    <Card direction="column" centered cardRole="skill" className="h-38">
       <Tooltip.Provider>
         <Tooltip.Root>
           <Tooltip.Trigger>

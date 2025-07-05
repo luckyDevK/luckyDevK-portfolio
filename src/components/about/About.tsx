@@ -1,14 +1,18 @@
-import { Heading, Text, Container } from "@radix-ui/themes";
+import { Heading, Text, Flex } from "@radix-ui/themes";
 import DevJourneySection from "./DevJourneySection";
 
 import ContainerSec from "../ContainerSec";
 
 export default function About() {
   return (
-    <ContainerSec id="about" className="justify-center">
+    <Flex direction="column" align="center" id="about">
       <Heading size="7" className="pb-5">
-        About Me
+        About{" "}
+        <Text className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Me
+        </Text>
       </Heading>
+
       <Text as="p" size="5" className="pb-10">
         I'm a frontend developer with a strong focus on building responsive,
         user-friendly interfaces using modern web technologies like React,
@@ -18,6 +22,6 @@ export default function About() {
         deepen my full-stack skills.
       </Text>
       <DevJourneySection />
-    </ContainerSec>
+    </Flex>
   );
 }

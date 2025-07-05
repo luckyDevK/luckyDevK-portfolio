@@ -20,7 +20,12 @@ export default function FeatureCard({
   children,
 }: ICardProps) {
   return (
-    <Card centered cardRole="about" className={twMerge("py-8 px-3", className)}>
+    <Card
+      direction="column"
+      centered
+      cardRole="about"
+      className={twMerge("py-8 px-3", className)}
+    >
       {icon && (
         <Flex
           align="center"

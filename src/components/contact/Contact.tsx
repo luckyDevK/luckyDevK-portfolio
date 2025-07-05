@@ -13,13 +13,13 @@ export default function Contact() {
       <Text as="p" mt="3" size="4" wrap="pretty">
         Have a project in mind or just want to chat? I'd love to hear from you!
       </Text>
-      <Heading align="left" my="8" mb="5" weight="bold">
+      <Heading align="left" my="8" mb="5" weight="medium">
         Let's Connect
       </Heading>
       <Flex direction="column" gap="5">
         <Card
           centered={false}
-          className="flex items-center gap-4 py-6 px-5"
+          className="flex items-center gap-4 py-5 px-5"
           direction="row"
         >
           <div className="rounded-full w-12 h-12  gradient-dark-blue shadow-md flex items-center justify-center">
@@ -35,7 +35,7 @@ export default function Contact() {
 
         <Card
           centered={false}
-          className="flex items-center gap-4 py-6 px-5"
+          className="flex items-center gap-4 py-5 px-5"
           direction="row"
         >
           <div className="rounded-full w-12 h-12 bg-gradient-to-br from-emerald-400 to-green-500 shadow-md flex items-center justify-center">
@@ -51,7 +51,7 @@ export default function Contact() {
 
         <Card
           centered={false}
-          className="flex items-center gap-4 py-6 px-5"
+          className="flex items-center gap-4 py-5 px-5"
           direction="row"
         >
           <div className="rounded-full w-12 h-12 bg-gradient-to-br from-pink-400 to-rose-500 shadow-md flex items-center justify-center">
@@ -75,9 +75,9 @@ export default function Contact() {
       <Card
         centered={true}
         direction="column"
-        className="mt-10 py-6 px-6 w-full max-w-xl bg-white/5 border border-white/10 rounded-xl shadow-lg"
+        className="mt-10 py-6 px-6 max-w-md bg-white/5 border border-white/10 rounded-xl shadow-lg"
       >
-        <Form.Root className="space-y-6">
+        <Form.Root className="space-y-6 w-full">
           {/* Name Field */}
           <Form.Field name="name">
             <Form.Control asChild>

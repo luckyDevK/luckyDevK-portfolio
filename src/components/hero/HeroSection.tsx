@@ -1,27 +1,30 @@
-import { Text, Heading } from "@radix-ui/themes";
+import { Text, Heading, Flex } from "@radix-ui/themes";
 import * as Avatar from "@radix-ui/react-avatar";
+import myProfile from "../../assets/WhatsApp Image 2025-07-05 at 19.22.58 (1).png";
 
 import HeroDetails from "./HeroDetails";
-import ContainerSec from "../ContainerSec";
 
 export default function HeroSection() {
   return (
-    <ContainerSec id="hero" className="min-h-dvh">
-      {/* <AnimatedBg /> */}
-
-      <Avatar.Root className=" mb-10 relative w-50 aspect-square self-center rounded-2xl border-4 border-gray-200 shadow-xl overflow-hidden">
-        <Avatar.Image
-          src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-          alt="profile img"
-          className="w-full h-full object-cover"
-        />
-        <Avatar.Fallback className="absolute inset-0 flex items-center justify-center text-2xl bg-sky-600 text-white font-medium">
-          Photo profile
-        </Avatar.Fallback>
+    <Flex direction="column" align="center" id="hero" className="mt-15">
+      <Avatar.Root className="relative w-48 h-48 p-[4px] rounded-2xl bg-gradient-to-br from-blue-500/30 to-cyan-500/30 border border-white/10 shadow-xl mb-5">
+        <div className="w-full h-full rounded-xl overflow-hidden">
+          <Avatar.Image
+            src={myProfile}
+            alt="Profile image"
+            className="w-full h-full object-cover"
+          />
+          <Avatar.Fallback className="absolute inset-0 flex items-center justify-center bg-sky-600 text-white text-xl font-semibold">
+            Very Lucky
+          </Avatar.Fallback>
+        </div>
       </Avatar.Root>
 
       <Heading as="h1" weight="bold" align="right" className="pb-5">
-        Hi, I'm Very Lucky
+        Hi, I'm{" "}
+        <Text className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Very Lucky
+        </Text>
       </Heading>
 
       <Text as="p" size="5" className="text-slate-200">
@@ -34,6 +37,6 @@ export default function HeroSection() {
       </Text>
 
       <HeroDetails />
-    </ContainerSec>
+    </Flex>
   );
 }

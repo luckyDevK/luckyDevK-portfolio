@@ -1,4 +1,4 @@
-import { Heading, Text, Grid } from "@radix-ui/themes";
+import { Heading, Text, Grid, Flex } from "@radix-ui/themes";
 
 import { icons } from "../../util/skillIcons";
 import TechCard from "./TechCard";
@@ -6,10 +6,14 @@ import ContainerSec from "../ContainerSec";
 
 export default function Skills() {
   return (
-    <ContainerSec id="skills">
+    <Flex direction="column" align="center" id="skills">
       <Heading size="7" weight="bold" highContrast>
-        My Skills
+        My{" "}
+        <Text className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Skills
+        </Text>
       </Heading>
+
       <Text as="p" wrap="balance" className="pt-5" size="5">
         Technologies and tools I work with to bring ideas to life
       </Text>
@@ -35,6 +39,6 @@ export default function Skills() {
           );
         })}
       </Grid>
-    </ContainerSec>
+    </Flex>
   );
 }

@@ -13,9 +13,8 @@ export default function Index() {
       <Header />
       <Section
         pt="0"
-        px="5"
         size="4"
-        className="flex items-center justify-center flex-col text-center text-slate-100"
+        className="flex items-center justify-center gap-30 flex-col text-center text-slate-100 md:container md:mx-auto md:px-20 px-5"
       >
         <Hero />
         <About />

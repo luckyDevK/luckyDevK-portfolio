@@ -57,7 +57,12 @@ export default function ProjectCard({
   githubLink,
 }: ProjectCardProps) {
   return (
-    <Card centered={false} className="w-full" cardRole="show-projects">
+    <Card
+      direction="column"
+      centered={false}
+      className="w-full"
+      cardRole="show-projects"
+    >
       <Avatar.Root className="w-full">
         <Avatar.Image
           alt="Projects"

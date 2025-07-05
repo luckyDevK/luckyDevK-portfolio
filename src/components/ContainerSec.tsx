@@ -10,7 +10,6 @@ interface IContainer {
 export default function ContainerSec({ className, id, children }: IContainer) {
   return (
     <Section
-      maxWidth="1200px"
       id={id}
       className={twJoin("flex flex-col items-center", className)}
     >
