@@ -36,7 +36,7 @@ export default function Card({
       gap="20px"
       direction={direction}
       className={twMerge(
-        ` bg-white/10 backdrop-blur-md border border-white/20 rounded-md hover:bg-white/20 overflow-hidden`,
+        `bg-white/10 backdrop-blur-md border border-white/20 rounded-md hover:bg-white/20 overflow-hidden`,
         className
       )}
     >
