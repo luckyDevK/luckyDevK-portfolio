@@ -11,7 +11,7 @@ export default function ContactInfoCards() {
       flexShrink={"1"}
       className="max-w-120 w-full mt-10 mb-8"
     >
-      <Heading align="left" my="8" mb="2" weight="medium">
+      <Heading align="left" my="8" mb="2" weight="bold">
         Let's Connect
       </Heading>
       <Card

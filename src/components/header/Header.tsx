@@ -23,7 +23,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between py-4 md:container md:mx-auto  px-6 transition-all duration-150">
+      <div className="container flex items-center justify-between py-4  mx-auto  px-6 transition-all duration-150">
         <LuckyDevLogo />
         <NavigationMenu />
       </div>

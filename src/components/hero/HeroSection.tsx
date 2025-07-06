@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <Section
       id="home"
-      className="md:mt-30 md:w-[90%] mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
+      className="md:mt-20 md:w-[90%] mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
     >
       {/* Left: Text Content */}
       <Flex direction="column" gap={"5"} className="text-center md:text-left">
