@@ -18,7 +18,7 @@ const projectS: ProjectCardProps[] = [
   {
     title: "Hangman Game (React)",
     alt: "Hangman-Game",
-    desc: "A classic Hangman word-guessing game built with React and Tailwind CSS. Features dynamic UI, responsive design, and smooth game logic.",
+    desc: "A classic Hangman word-guessing game built with React and Tailwind CSS. Features dynamic UI, responsive design, and smooth game logic. best for u",
     projectUrl: "https://hangman-game-react-js-lilac.vercel.app/",
     src: hangmanPreview,
     techs: ["html", "javascript", "react", "tailwind"],
@@ -37,25 +37,18 @@ const projectS: ProjectCardProps[] = [
 
 export default function Projects() {
   return (
-    <Flex direction="column" gap="5" id="projects">
-      <Heading size={"7"}>Featured Projects</Heading>
-      <Text size={"4"}>A showcase of my recent work and personal projects</Text>
-      <Flex
-        wrap="wrap"
-        className="w-full mt-8"
-        direction={{ md: "row", initial: "column" }}
-        gap="7"
-      >
+    <Flex
+      direction="column"
+      align="center"
+      gap="5"
+      id="projects"
+      className="md:w-[95%]"
+    >
+      <Heading size="7">Featured Projects</Heading>
+      <Text size="4">A showcase of my recent work and personal projects</Text>
+      <Flex className="mt-8" gap="7" justify={"center"} wrap={"wrap"}>
         {projectS.map((project) => (
-          <ProjectCard
-            alt={project.alt}
-            desc={project.desc}
-            projectUrl={project.projectUrl}
-            src={project.src}
-            techs={project.techs}
-            title={project.title}
-            githubLink={project.githubLink}
-          />
+          <ProjectCard key={project.title} {...project} />
         ))}
       </Flex>
     </Flex>

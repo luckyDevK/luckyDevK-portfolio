@@ -6,7 +6,7 @@ import ContainerSec from "../ContainerSec";
 
 export default function Skills() {
   return (
-    <Flex direction="column" align="center" id="skills">
+    <Flex direction="column" align="center" id="skills" className="w-full">
       <Heading size="7" weight="bold" highContrast>
         My{" "}
         <Text className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -22,6 +22,7 @@ export default function Skills() {
         aria-label="Technology skills grid"
         columns="repeat(auto-fill, minmax(9.5rem, 1fr))"
         width="100%"
+        maxWidth={"55rem"}
         gap="5"
         pt="6"
       >

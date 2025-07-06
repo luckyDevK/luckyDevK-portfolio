@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <Section
       id="home"
-      className="md:mt-30 mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
+      className="md:mt-30 md:w-[90%] mt-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
     >
       {/* Left: Text Content */}
       <Flex direction="column" gap={"5"} className="text-center md:text-left">
@@ -19,7 +19,11 @@ export default function HeroSection() {
           👋
         </Heading>
 
-        <Text as="p" size="5" className="text-slate-300 leading-relaxed ">
+        <Text
+          as="p"
+          size="5"
+          className="text-slate-300 leading-relaxed md:pr-40"
+        >
           I'm a frontend developer with a strong foundation in building
           responsive and modern web applications using React, Tailwind CSS,
           TypeScript, and JavaScript. I also explore backend tools like Node.js
@@ -32,7 +36,7 @@ export default function HeroSection() {
 
       {/* Right: Profile Avatar */}
       <div className="relative w-45 aspect-square md:w-65 shrink-0">
-        <div className="absolute md:-right-6 md:-bottom-6 md:scale-100 scale-x-125  w-full h-full rounded-2xl bg-white/10" />
+        <div className="absolute md:-right-6 md:-bottom-6 md:scale-100 scale-x-125  top-5  w-full h-full rounded-2xl bg-white/10" />
         <Avatar.Root className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl z-10">
           <Avatar.Image
             src={myProfile}

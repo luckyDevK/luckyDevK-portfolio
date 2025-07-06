@@ -17,13 +17,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 bg-transparent ${
+      className={`fixed w-full z-50 bg-transparent  ${
         isScrolled
           ? "bg-white/10 backdrop-blur-lg border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between py-4 md:container md:mx-auto md:px-20  px-5 transition-all duration-150">
+      <div className="container flex items-center justify-between py-4 md:container md:mx-auto  px-6 transition-all duration-150">
         <LuckyDevLogo />
         <NavigationMenu />
       </div>

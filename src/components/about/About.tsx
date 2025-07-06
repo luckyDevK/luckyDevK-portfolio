@@ -1,11 +1,9 @@
 import { Heading, Text, Flex } from "@radix-ui/themes";
 import DevJourneySection from "./DevJourneySection";
 
-import ContainerSec from "../ContainerSec";
-
 export default function About() {
   return (
-    <Flex direction="column" align="center" id="about">
+    <Flex direction="column" align="center" id="about" className=" md:w-[90%]">
       <Heading size="7" className="pb-5">
         About{" "}
         <Text className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">

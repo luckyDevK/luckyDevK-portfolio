@@ -12,7 +12,7 @@ export default function Index() {
     <>
       <Section pt="0" className="relative z-10">
         <Header />
-        <div className="flex items-center justify-center gap-30 flex-col text-center text-slate-100 md:container md:mx-auto md:px-40 px-7">
+        <div className="flex items-center justify-center gap-30 flex-col text-center text-slate-100 md:container md:mx-auto px-6">
           <Hero />
           <About />
           <Skills />

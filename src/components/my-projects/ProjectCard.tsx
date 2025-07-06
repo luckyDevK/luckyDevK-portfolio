@@ -1,5 +1,5 @@
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Flex, Heading, Text, Button } from "@radix-ui/themes";
+import { Flex, Heading, Text } from "@radix-ui/themes";
 import { ExternalLink } from "lucide-react";
 import * as Avatar from "@radix-ui/react-avatar";
 import Card from "../UI/Card";
@@ -19,11 +19,9 @@ export interface ProjectCardProps extends Thumbnail {
 
 type ProjectLinkProps = Pick<ProjectCardProps, "projectUrl" | "githubLink">;
 
-//https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
-
 function ProjectLink({ projectUrl, githubLink }: ProjectLinkProps) {
   return (
-    <Flex gap="5" className="py-4">
+    <Flex gap="5" className="pt-4">
       <a
         href={githubLink}
         target="_blank"
@@ -33,12 +31,11 @@ function ProjectLink({ projectUrl, githubLink }: ProjectLinkProps) {
         <GitHubLogoIcon width="1.3rem" height="1.5rem" />
         Code
       </a>
-
       <a
         href={projectUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-1/2 gradient-dark-blue text-white rounded-md py-2 px-4 font-semibold flex items-center justify-center gap-2 transition-all hover:brightness-110  shadow-md"
+        className="w-1/2 gradient-dark-blue text-white rounded-md py-2 px-4 font-semibold flex items-center justify-center gap-2 transition-all hover:brightness-110 shadow-md"
       >
         <ExternalLink width="1.3rem" height="1.5rem" />
         Live Demo
@@ -60,14 +57,14 @@ export default function ProjectCard({
     <Card
       direction="column"
       centered={false}
-      className="w-full"
+      className="max-w-105 flex flex-col justify-between"
       cardRole="show-projects"
     >
       <Avatar.Root className="w-full">
         <Avatar.Image
-          alt="Projects"
+          alt={alt}
           src={src}
-          className="size-full max-h-70 object-cover"
+          className="object-cover w-full h-48 rounded-md"
         />
         <Avatar.Fallback
           className="leading-1 flex size-full items-center justify-center bg-white text-[15px] font-medium text-violet11"
@@ -76,22 +73,33 @@ export default function ProjectCard({
           {alt}
         </Avatar.Fallback>
       </Avatar.Root>
-      <div className="px-5">
-        <Heading as="h3" weight="bold" size="5" align="left">
-          {title}
-        </Heading>
-        <Text className="pt-5" as="p" align="left" wrap="balance">
-          {desc}
-        </Text>
-        <Flex gap="3" wrap="wrap" className="py-5">
-          {techs.map((tech) => (
-            <button className="text-blue-100 capitalize bg-blue-500/20 px-4 py-1.5 rounded-full font-medium tracking-wide shadow-sm transition-all duration-300 hover:bg-blue-500/30 hover:text-white hover:shadow-md">
-              {tech}
-            </button>
-          ))}
-        </Flex>
+
+      <Flex
+        direction="column"
+        justify="between"
+        className="flex-1 px-5 pb-5 pt-4"
+      >
+        <div>
+          <Heading as="h3" weight="bold" size="5" align="left">
+            {title}
+          </Heading>
+          <Text className="pt-3" as="p" align="left" wrap="balance">
+            {desc}
+          </Text>
+          <Flex gap="3" wrap="wrap" className="py-4">
+            {techs.map((tech) => (
+              <span
+                key={tech}
+                className="text-blue-100 capitalize bg-blue-500/20 px-4 py-1.5 rounded-full font-medium tracking-wide shadow-sm transition-all duration-300 hover:bg-blue-500/30 hover:text-white hover:shadow-md"
+              >
+                {tech}
+              </span>
+            ))}
+          </Flex>
+        </div>
+
         <ProjectLink projectUrl={projectUrl} githubLink={githubLink} />
-      </div>
+      </Flex>
     </Card>
   );
 }
