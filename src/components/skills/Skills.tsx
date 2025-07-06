@@ -2,7 +2,6 @@ import { Heading, Text, Grid, Flex } from "@radix-ui/themes";
 
 import { icons } from "../../util/skillIcons";
 import TechCard from "./TechCard";
-import ContainerSec from "../ContainerSec";
 
 export default function Skills() {
   return (

@@ -1,4 +1,4 @@
-import { Flex, Box } from "@radix-ui/themes";
+import { Box } from "@radix-ui/themes";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { twJoin } from "tailwind-merge";
 import { clsx } from "clsx";
@@ -37,7 +37,7 @@ export default function TechCard({
             <Tooltip.Content
               className={twJoin(
                 clsx(
-                  " px-3 py-1 text-sm rounded shadow-md font-semibold select-none leading-none",
+                  " px-3 py-1 text-base font-bold rounded shadow-md select-none leading-none",
                   tooltipBg,
                   tooltipBg === "bg-white" || tooltipBg === "bg-neutral-100"
                     ? "text-black"
