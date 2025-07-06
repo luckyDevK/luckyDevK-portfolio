@@ -13,7 +13,6 @@ A modern, responsive portfolio website built using **React**, **TailwindCSS**, *
 - 🎨 Clean UI with TailwindCSS + Radix UI components
 - 💼 Project showcase with live demo and GitHub links
 - 📱 Contact form with basic validation
-- 🌙 Light/Dark mode toggle (optional if you added it)
 - 📸 Hero section with image and personal introduction
 
 ## 🛠️ Tech Stack
