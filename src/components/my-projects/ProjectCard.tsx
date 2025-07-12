@@ -57,7 +57,7 @@ export default function ProjectCard({
     <Card
       direction="column"
       centered={false}
-      className="max-w-105 flex flex-col justify-between"
+      className="max-w-96 flex flex-col justify-between"
       cardRole="show-projects"
     >
       <Avatar.Root className="w-full">
