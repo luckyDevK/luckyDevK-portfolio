@@ -13,6 +13,7 @@ import {
   TailwindCssIcon,
   TypeScriptIcon,
   GithubIcon,
+  NextJsIcon,
 } from "../assets/icons";
 
 type TIcons = {
@@ -107,6 +108,12 @@ export const icons: TIcons = [
     hoverClass: "hover:shadow-white",
     tooltipBg: "bg-white",
   },
+  {
+    Icon: NextJsIcon,
+    name: "NextJs",
+    hoverClass: "hover:shadow-black",
+    tooltipBg: "bg-slate-800",
+  },
 ];
 
 export function tailwindColorFromClass(bgClass: string): string {
@@ -125,7 +132,8 @@ export function tailwindColorFromClass(bgClass: string): string {
     "bg-red-500": "#ef4444",
     "bg-blue-500": "#3b82f6",
     "bg-white": "#ffffff",
+    "bg-slate-800": "#0f172b",
   };
 
-  return colorMap[bgClass] || "#000000"; // default fallback
+  return colorMap[bgClass] || "#000000";
 }

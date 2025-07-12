@@ -12,3 +12,4 @@ export { ReactComponent as BootstrapIcon } from "./bootstrap.svg";
 export { ReactComponent as ReactQueryIcon } from "./reactQuery.svg";
 export { ReactComponent as ReactRouterIcon } from "./reactRouter.svg";
 export { ReactComponent as TypeScriptIcon } from "./ts.svg";
+export { ReactComponent as NextJsIcon } from "./nextJs.svg";

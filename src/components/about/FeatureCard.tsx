@@ -12,6 +12,8 @@ interface ICardProps {
   children?: ReactNode;
 }
 
+// mongodb, express, nodejs, typescript, react, tailwind,
+
 export default function FeatureCard({
   icon,
   text,
@@ -30,7 +32,7 @@ export default function FeatureCard({
         <Flex
           align="center"
           justify="center"
-          className="gradient-dark-blue text-white w-12 aspect-square rounded-full"
+          className="gradient-dark-blue  text-white w-12 aspect-square rounded-full"
         >
           {icon}
         </Flex>
