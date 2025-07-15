@@ -23,7 +23,7 @@ export default function DevJourneySection() {
         aria-label="region"
         direction={{ md: "row", initial: "column" }}
         gap="5"
-        className="mt-10"
+        className="mt-10 w-full"
       >
         <FeatureCard
           icon={<Code />}
@@ -45,9 +45,13 @@ export default function DevJourneySection() {
       <Card
         centered={false}
         direction="column"
-        className="md:px-10 px-6 py-8 w-full mt-10"
+        className=" md:px-10 px-6 py-8 w-full mt-10"
       >
-        <Heading weight={"bold"} align={"left"} size={"5"}>
+        <Heading
+          weight={"bold"}
+          align={{ md: "left", initial: "center" }}
+          size={"5"}
+        >
           My Journey
         </Heading>
         <Flex
@@ -60,27 +64,29 @@ export default function DevJourneySection() {
             className="max-w-xl"
             gap={{ md: "7", initial: "5" }}
           >
-            <Text align={"left"}>
+            <Text align={{ md: "left", initial: "center" }}>
               With several years of experience in web development, I've worked
               on diverse projects ranging from small business websites to
               large-scale applications. I'm constantly learning and adapting to
               new technologies to stay at the forefront of web development.
             </Text>
-            <Text align={"left"}>
+            <Text align={{ md: "left", initial: "center" }}>
               When I'm not coding, I enjoy exploring new technologies,
               contributing to open-source projects, and sharing knowledge with
               the developer community.
             </Text>
           </Flex>
 
-          <Flex direction="column" gap="4" className="w-full md:max-w-md">
+          <Flex direction="column" gap="4" className="w-full lg:max-w-md">
             {careerStats.map((stat, index) => (
               <Flex
                 key={index}
                 justify="between"
                 className="px-4 py-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm"
               >
-                <Text className="font-medium">{stat.label}</Text>
+                <Text className="font-medium flex items-center">
+                  {stat.label}
+                </Text>
                 <Text weight="bold" className={`${stat.color} text-xl`}>
                   {stat.value}
                 </Text>
